@@ -1,0 +1,600 @@
+<div id="hc_richmedia">
+    <meta name="viewport" content="width=device-width">
+	<script type="text/javascript">
+		if(!window.jQuery || !window.$) {
+			document.write('\x3Cscript src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">\x3C/script>');
+		}
+	</script>
+    <script src="scripts/37941.js" type="text/javascript" ></script> <!-- SpriteSpin -->
+	<script src="scripts/33030.js" type="text/javascript"></script> <!-- Flexslider -->
+	<script type="text/javascript" src="mraid.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/27565.css" media="screen" /> <!-- Flexslider -->
+
+	
+	<style type="text/css">
+	  html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	  }
+	  /* HTML5 display-role reset for older browsers */
+	  article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+	  body {line-height: 1;}
+	  ol, ul {list-style: none;}
+	  blockquote, q {quotes: none;}
+	  blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+	  table {border-collapse: collapse; border-spacing: 0;}
+	  strong {font-weight: bold;}
+	  em {font-style: italic;}
+				  
+	  /* apply a natural box layout model to all elements */
+	  *, *:before, *:after {
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	   }
+	  
+
+	body {margin: 0px;}
+	#hc_richmedia {
+		font-family: Helvetica, Arial, Sans-serif;
+		position:relative;
+		width:320px;
+		margin:0 auto;
+      /*border:solid 1px red;*/
+	}
+	#hc_richmedia .hc_content {
+		position:relative;
+		width:320px;
+		height:300px;
+		text-align:center;
+		z-index:1;
+		overflow: hidden;
+	}
+	#hc_richmedia .hc_closebtn {
+		position:absolute;
+		top: .3em;
+		right: .3em;
+		z-index:2;
+		cursor:pointer;
+	}
+	#hc_richmedia .hc_closebtn img {
+		position:relative;
+		z-index:20;
+	}
+	#hc_richmedia .hc_content h3 {
+		margin-top:0;
+	}
+	#hc_richmedia .hc_blockimg {
+		display:block;
+	}
+	a img {border: none;}
+
+	/* custom styles */
+	#start_btn {
+		position: relative;
+		top: 305px;
+	}
+	.hc_click {
+		display: none;
+		position: absolute;
+		top: 357px;
+		left: 85px;
+	}
+	
+	#hc_buttons { 
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+	#hc_buttons li {
+		float: left;
+		list-style-type: none;
+		width: auto;
+	}
+	#hc_buttons li a {
+		display: block;
+		height: 37px;
+		text-indent: -99999px;	
+		background: transparent url('images/37929.jpg') no-repeat;
+	}
+	#hc_buttons li a#btn_video { background-position: 0 0; width: 107px; }
+	#hc_buttons li a#btn_tech { background-position: -107px 0; width: 107px;}
+	#hc_buttons li a#btn_rotate { background-position: -214px 0; width: 106px; }
+	#hc_buttons li a#btn_video.active { background-position: 0 -37px; }
+	#hc_buttons li a#btn_tech.active { background-position: -107px -37px;}
+	#hc_buttons li a#btn_rotate.active { background-position: -214px -37px;  }
+	
+
+	#videoframe {
+		background-color: black;
+		height: 150px;
+	}
+	/* flexslider */
+	.flexslider {
+		background: none;
+	}
+	
+	div#slider {
+		border: 0 none;
+		box-shadow: 0 0 0; 
+		margin: 0 0 0 0;
+		background: transparent;
+		height: 150px; 
+		width: 320px;
+		overflow: hidden;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+	div .flex-direction-nav .flex-prev,
+	div .flex-direction-nav .flex-prev:hover{
+		background-image:url('images/37928.png') !important;
+		background-size: cover;
+		background-position: 0 0;
+		opacity: 1 !important;
+		display: block;
+		height: 37px;
+		width: 27px;
+		z-index: 5;
+		position: absolute;
+		left: 0px !important;
+		top: 50%;
+		overflow: hidden;
+	}
+	div .flex-direction-nav .flex-next,
+	div .flex-direction-nav .flex-next:hover{
+		background-image:url('images/37928.png') !important;
+		background-size: cover;
+		opacity: 1 !important;
+		background-position: -28px 0;
+		display: block;
+		height: 37px;
+		width: 27px;
+		z-index: 5;
+		position: absolute;
+		right: 0px !important;
+		top: 50%;
+		overflow: hidden;
+	}
+	.flex-control-nav { bottom: 10px !important; }
+	.flex-control-paging li a { background-color: white !important; }
+	.flex-control-paging li a.flex-active { background-color: #f3de6f !important; }
+	div#slider .slides li {height: 150px; width: 320px; margin: 0 auto;background-size: cover;}
+
+	div#slider ul {margin: 0;}
+	div#slider ul.slides li {position: relative; list-style: none;}
+	
+	/* Spritespin */
+	#rotation { 
+		display: none; 
+		background: transparent url('images/37878.jpg') no-repeat; 
+		background-position: 0 -10px;
+		}
+	.spritespin { height: 150px !important; }
+	.spritespin-stage { top: -10px !important; }
+	.rotateLeft {
+		position: absolute;
+		background: transparent url('images/37933.png') no-repeat 0 0;
+		top: 200px;
+		left: 3px;
+		height: 21px;
+		width: 30px;
+	}
+	.rotateRight {
+		position: absolute;
+		background: transparent url('images/37933.png') no-repeat -30px 0;
+		top: 200px;
+		right: 3px;		
+		height: 21px;
+		width: 30px;
+	}
+	.rotateInstructions {
+		position: absolute;
+		background: transparent url('images/38150.png') no-repeat 0 0;
+		top: 84px;		
+		height: 36px;
+		width: 320px;
+		background-size: contain;
+	}
+	
+	/* Footer styles */
+	#hc_legal_link {
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 13px;
+		bottom: 9px;
+		left: 11px;
+	}
+	#hc_apprende_mas {
+		display: block;
+		position: absolute;
+		width: 108px;
+		height: 22px;
+		bottom: 26px;
+		right: 14px;
+	}
+	#legalCopy {
+		background: transparent url('images/37932.png') no-repeat bottom center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: 20px;
+		display: none;
+	}
+	
+	#header { display: block; }
+	#hc_frame1 { height: 150px; }
+	
+	/* loading animation */
+  .loading {
+	display: inline-block;
+	margin: 4em;
+	border-width: 30px;
+	border-radius: 50%;
+	-webkit-animation: spin 1s linear infinite;
+	   -moz-animation: spin 1s linear infinite;
+		 -o-animation: spin 1s linear infinite;
+			animation: spin 1s linear infinite;
+	}
+  
+  .style-1 {
+	border-style: solid;
+	border-color: #444 transparent;
+	}
+  
+  .style-2 {
+	border-style: double;
+	border-color: #444 transparent;
+	}
+  
+  .style-3 {
+	border-style: double;
+	border-color: #444 #fff #fff;
+	}
+  
+  @-webkit-keyframes spin {
+	100% { -webkit-transform: rotate(359deg); }
+	}
+  
+  @-moz-keyframes spin {
+	100% { -moz-transform: rotate(359deg); }
+	}
+  
+  @-o-keyframes spin {
+	100% { -moz-transform: rotate(359deg); }
+	}
+  
+  @keyframes spin {
+	100% {  transform: rotate(359deg); }
+	}
+  
+	a#hc_expand { background: transparent url('images/38149.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	.head_video { background: transparent url('images/38307.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	.head_features { background: transparent url('images/38308.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	.head_rotate { background: transparent url('images/38299.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	#front { background: transparent url('images/38155.jpg') no-repeat; }
+	#dash { background: transparent url('images/38154.jpg') no-repeat; }
+	#street { background: transparent url('images/38153.jpg') no-repeat; }
+	#hc_footer { background: transparent url('images/37920.jpg') no-repeat; width: 100%; height: 60px; }
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+	a#hc_expand { background: transparent url('images/38130.jpg') no-repeat; background-size: cover; }
+	.head_video { background: transparent url('images/38306.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	.head_features { background: transparent url('images/38305.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	.head_rotate { background: transparent url('images/38304.jpg') no-repeat; background-size: cover; display: block; width: 320px; height: 50px; }
+	#front { background: transparent url('images/38124.jpg') no-repeat; }
+	#dash { background: transparent url('images/38123.jpg') no-repeat; }
+	#street { background: transparent url('images/38122.jpg') no-repeat; }
+	.rotateInstructions { background: transparent url('images/38121.png') no-repeat; background-size: contain; }
+	#hc_buttons li a { background: transparent url('images/38126.jpg') no-repeat; }
+	#legalCopy { background: transparent url('images/38145.png') no-repeat bottom center; background-size: contain; }
+	#hc_buttons li a {
+		background-size: 320px 74px; /* This replicates the original standard sprite dimensions */
+		}
+	#hc_footer { background: transparent url('images/38159.jpg') no-repeat; width: 100%; height: 60px; background-size: contain; }
+
+}
+
+	</style>
+	
+	<div class="hc_initial_view">		
+		<a href="#" id="hc_expand" onclick="jQuery.hc_rm.expand(event); return false;"> </a>	
+
+	</div> <!-- end initial view content -->
+	
+	<div class="hc_content" id="hc_content" style="display:none;">
+		<div class="hc_closebtn" id="hc_closebtn" style="display:none;" onclick="jQuery.hc_rm.collapse(event); return false;">
+			<img src="images/37940.png" />
+		</div>
+		
+        <div id="header" class="head_video"> </div>
+        
+		<ul id="hc_buttons">
+			<li><a href="#" id="btn_video" class="active">video</a></li>
+			<li><a href="#" id="btn_tech">technologia</a></li>
+			<li><a href="#" id="btn_rotate">vista de 360&deg;</a></li>
+		</ul>
+
+
+		<div id="videoframe">
+	 		<iframe id="hc_frame1" width="100%" height="auto" src="https://www.youtube.com/embed/VRyi0BQNKCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+	 	
+	 	<div id="tech" style="display: none;">
+ 			<div id="slider" class="flexslider">
+  				<ul class="slides">
+    				<li id="front"> </li>
+    				<li id="dash"> </li>
+    				<li id="street"> </li>
+    			</ul>
+			</div>
+	 	</div>
+	
+    	<div id="rotation">
+          <div class='spritespin'>
+            <span class="loading style-1"></span>
+            <span class="loading style-2"></span>
+            <span class="loading style-3"></span>
+          </div>
+          <div class="rotateLeft"> </div>
+          <div class="rotateRight"> </div>
+          <div class="rotateInstructions"> </div>
+		</div>
+        
+	 	<div id="hc_footer">
+            <a href="#" id="hc_legal_link"> </a>
+            <a href="#" id="hc_apprende_mas"> </a>
+            <div id="legalCopy"> </div>
+        </div>
+ 	</div><!-- end reveal content -->
+    
+ 	<div class="hidden">
+	<script type="text/javascript">
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"images/37878.jpg",
+				"images/37879.jpg",
+				"images/37880.jpg",
+				"images/37881.jpg",
+				"images/37882.jpg",
+				"images/37883.jpg",
+				"images/37884.jpg",
+				"images/37885.jpg",
+				"images/37886.jpg",
+				"images/37887.jpg",
+				"images/37888.jpg",
+				"images/37889.jpg",
+				"images/37890.jpg",
+				"images/37891.jpg",
+				"images/37892.jpg",
+				"images/37893.jpg",
+				"images/37894.jpg",
+				"images/37895.jpg",
+				"images/37896.jpg",
+				"images/37897.jpg",
+				"images/37898.jpg",
+				"images/37899.jpg",
+				"images/37900.jpg",
+				"images/37901.jpg",
+				"images/37902.jpg",
+				"images/37903.jpg",
+				"images/37904.jpg",
+				"images/37905.jpg",
+				"images/37906.jpg",
+				"images/37907.jpg",
+				"images/37908.jpg",
+				"images/37909.jpg",
+				"images/37910.jpg",
+				"images/37911.jpg",
+				"images/37913.jpg",
+				"images/37914.jpg"
+			)
+	</script>
+</div>
+<script type="text/javascript">
+(function (a) {
+    var f;
+    a.hc_rm = {
+        getQP: function (a) {
+            if (window.location && "string" === typeof window.location.search) {
+                var e = window.location.search.substr(1).split("&"),
+                    c, d;
+                for (d = 0; d < e.length; d++)
+                    if (c = e[d].split("="), 2 === c.length && c[0] === a) return unescape(c[1])
+            }
+            return !1
+        },
+        /*getSQP: function (b) {
+            var e = a("script[src*='as.aug.me']").attr("src").split("?");
+            if (1 < e.length) {
+                var e = e[1].split("&"),
+                    c, d;
+                for (d = 0; d < e.length; d++)
+                    if (c = e[d].split("="), 2 === c.length && c[0] === b) return unescape(c[1])
+            }
+            return !1
+        },*/
+        expand: function (b) {
+            b ||
+                (b = window.event);
+            b.cancelBubble = !0;
+            b.stopPropagation && b.stopPropagation();
+            !0 === window.inDapIF && a("iframe", parent.document).each(function (b, c) {
+                if (c.contentWindow === window) return f = a(c).css("height"), a(c).css("height", "416px"), !1
+            });
+            "undefined" !== typeof mraid && (mraid.useCustomClose(!0), mraid.expand());
+            a("#hc_richmedia .hc_initial_view").hide();
+            a("#hc_richmedia .hc_content").show();
+            a("#hc_richmedia .hc_closebtn").show();
+   			document.getElementById('hc_frame1').src = document.getElementById('hc_frame1').src;
+            /*a("#hc_richmedia").append('<img src="#trk:expansion#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+            //!1 !== this.getSQP("exp");
+            return !1
+        },
+        collapse: function (b) {
+            b || (b = window.event);
+            b.cancelBubble = !0;
+            b.stopPropagation && b.stopPropagation();
+            !0 === window.inDapIF && a("iframe", parent.document).each(function (b, c) {
+                if (c.contentWindow === window) return a(c).css("height", f), !1
+            });
+            "undefined" !== typeof mraid && mraid.close();
+            a("#hc_richmedia .hc_content").hide();
+            a("#hc_richmedia .hc_closebtn").hide();
+            a("#hc_richmedia .hc_initial_view").show();
+            /*a("#hc_richmedia").append('<img src="#trk:collapse#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+            return !1
+        },
+        engage: function (b) {
+            b || (b = window.event);
+            b.cancelBubble = !0;
+            b.stopPropagation && b.stopPropagation();
+            /*a("#hc_richmedia").append('<img src="#trk:engage#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+            return !1
+        }
+    }
+})(jQuery);
+"undefined" !== typeof mraid && mraid.addEventListener("stateChange", handleStateChanges);
+
+function handleStateChanges() {
+    switch (mraid.getState()) {
+    case "expanded":
+        jQuery.hc_rm.expand();
+        break;
+    case "default":
+        jQuery.hc_rm.collapse()
+    }
+}
+$("#slider").flexslider({
+    touch: !0,
+    startAt: 0,
+    animation: "slide",
+    slideshow: !1,
+    controlNav: !0,
+    animationLoop: !0,
+    directionNav: !0,
+    sync: "#control",
+    start: function (a) {
+        a = a.find(".flex-active-slide").attr("id");
+        /*$("#hc_richmedia").append('<img src="#trk:' + a + "#?cb=" + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />')*/
+    },
+    before: function (a) {
+        $(".flexslider").css("left", "0");
+        $(".feature_info").hide()
+    },
+    after: function (a) {
+        "front" == $(".flex-active-slide").attr("id") ? $(".flex-prev").hide() : $(".flex-prev").show();
+        "street" == $(".flex-active-slide").attr("id") ? $(".flex-next").hide() : $(".flex-next").show();
+        a = a.find(".flex-active-slide").attr("id");
+        /*$("#hc_richmedia").append('<img src="#trk:' + a + "#?cb=" + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />')*/
+    }
+});
+$("#control").flexslider({
+    startAt: 0,
+    animation: "slide",
+    slideshow: !1,
+    controlNav: !1,
+    animationLoop: !1,
+    directionNav: !1,
+    asNavFor: "#slider",
+    itemWidth: 43,
+    itemMargin: 1
+});
+      
+var framesCounted = 0;
+
+function rotateCar() {
+    $(".spritespin").spritespin({
+        width: 320,
+        height: 163,
+        frames: 36,
+        sense: -.5,
+        frameTime: 50,
+        frameWrap: !0,
+        source: "images/37878.jpg images/37879.jpg images/37880.jpg images/37881.jpg images/37882.jpg images/37883.jpg images/37884.jpg images/37885.jpg images/37886.jpg images/37887.jpg images/37888.jpg images/37889.jpg images/37890.jpg images/37891.jpg images/37892.jpg images/37893.jpg images/37894.jpg images/37895.jpg images/37896.jpg images/37897.jpg images/37898.jpg images/37899.jpg images/37900.jpg images/37901.jpg images/37902.jpg images/37903.jpg images/37904.jpg images/37905.jpg images/37906.jpg images/37907.jpg images/37908.jpg images/37909.jpg images/37910.jpg images/37911.jpg images/37913.jpg images/37914.jpg".split(" ")
+    }).bind("onFrame", function(){
+	  framesCounted++;	
+	  if (framesCounted>37) {
+		  $('.rotateInstructions').hide(); 
+	  };
+    });
+	
+	/*$("#hc_richmedia").append('<img src="#trk:Vista_360_Degrees#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+}
+$("#btn_video").click(function () {
+    $('#hc_frame1').attr('src', function (i, val) {
+        return val;
+    });
+	$("#header").removeClass("head_features head_rotate").addClass("head_video");
+    $("#hc_buttons li a").removeClass("active");
+    $(this).addClass("active");
+    $("#videoframe").show();
+    $("#tech").hide();
+    $("#rotation").hide();
+	/*$("#hc_richmedia").append('<img src="#trk:video#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+});
+$("#btn_tech").click(function () {
+    $("#hc_buttons li a").removeClass("active");
+	$("#header").removeClass("head_video head_rotate").addClass("head_features");
+    $(this).addClass("active");
+    $("#videoframe").hide();
+    $("#tech").show();
+    $("#rotation").hide();
+	/*$("#hc_richmedia").append('<img src="#trk:Tecnologia#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+});
+$("#btn_rotate").click(function () {
+    $("#hc_buttons li a").removeClass("active");
+ 	$("#header").removeClass("head_video head_features").addClass("head_rotate");
+   $(this).addClass("active");
+    $("#videoframe").hide();
+    $("#tech").hide();
+    $("#rotation").show();
+	$('.rotateInstructions').show(); 
+    rotateCar();
+	
+});
+var current;
+$(".rotateLeft").click(function () {
+   current = $('.spritespin').spritespin("frame");
+   $('.spritespin').spritespin("frame", current + 1);
+   console.log(current);
+	
+});
+$(".rotateRight").click(function () {
+   current = $('.spritespin').spritespin("frame");
+   $('.spritespin').spritespin("frame", current - 1);
+   console.log(current);
+
+});
+$("#hc_legal_link").click(function () {
+    $("#legalCopy").toggle();
+	/*$("#hc_richmedia").append('<img src="#trk:Advisio_Legal#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+});
+$("#legalCopy").click(function () {
+    $("#legalCopy").toggle();
+
+});
+$("#hc_apprende_mas").click(function () {
+	/*$("#hc_richmedia").append('<img src="#trk:Aprende_Mas#?cb=' + (new Date).getTime() + '" style="position:absolute;height:1px;width:1px;" />');*/
+    window.location = "http://m.ford.com/cars/fusion "
+});
+$(document).ready(function () {
+    /*(new Image).src = "http://ad.doubleclick.net/ad/N3016.285074HIPCRICKET/B7992024.106068640;sz=1x1;ord=[TPAS_ID];" + (new Date).getTime() + "?"*/
+
+});
+document.ontouchmove = function(e){ e.preventDefault(); } 
+</script>
+	
+</div><!-- end required wrapper -->
